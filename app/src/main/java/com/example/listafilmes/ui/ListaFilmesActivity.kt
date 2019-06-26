@@ -26,9 +26,6 @@ class ListaFilmesActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
-
-
-
         ApiService.instance.obterFilmesPopulares("243278a36988122b863cfcfa1efaf7b8")
             .enqueue(object : Callback<FilmesResult> {
                 override fun onResponse(call: Call<FilmesResult>, response: Response<FilmesResult>) {
@@ -48,15 +45,5 @@ class ListaFilmesActivity : AppCompatActivity() {
 
         val listaFilmes: ArrayList<Filme> = arrayListOf()
 
-        for (x in 0 until 20) {
-            var filme = Filme("Filmao$x")
-            listaFilmes.add(filme)
-        }
-
-
-    }
-
-    class oi {
-        var oi : String = "kkk"
     }
 }
